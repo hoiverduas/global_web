@@ -1,6 +1,8 @@
-package com.sura.global_web.entities;
+package com.sura.global_web.ramos;
 
 
+import com.sura.global_web.subramos.SubRamos;
+import com.sura.global_web.producto.entities.Producto;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

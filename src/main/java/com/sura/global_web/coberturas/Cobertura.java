@@ -1,6 +1,7 @@
-package com.sura.global_web.entities;
+package com.sura.global_web.coberturas;
 
 
+import com.sura.global_web.planes.Plan;
 import jakarta.persistence.*;
 
 @Entity

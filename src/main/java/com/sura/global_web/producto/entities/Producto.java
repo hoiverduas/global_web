@@ -1,13 +1,16 @@
-package com.sura.global_web.entities;
+package com.sura.global_web.producto.entities;
 
 
+import com.sura.global_web.ramos.Ramos;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "productos")
+@Data
 public class Producto {
 
     @Id
@@ -16,4 +19,5 @@ public class Producto {
     private String name;
     @OneToMany(mappedBy = "producto")
     List<Ramos>ramos = new ArrayList<>();
+
 }

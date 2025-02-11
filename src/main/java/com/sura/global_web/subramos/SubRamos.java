@@ -1,5 +1,7 @@
-package com.sura.global_web.entities;
+package com.sura.global_web.subramos;
 
+import com.sura.global_web.planes.Plan;
+import com.sura.global_web.ramos.Ramos;
 import jakarta.persistence.*;
 
 import java.util.List;
