@@ -44,6 +44,7 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
 
         <dependency>
           <groupId>com.h2database</groupId>
@@ -53,6 +54,8 @@
 
 
 
+=======
+>>>>>>> 48261368eebb052b9864277916be46d9993a1bc1
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

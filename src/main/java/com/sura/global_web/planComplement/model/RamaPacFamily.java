@@ -8,8 +8,11 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import com.sura.global_web.plans.model.PlanPacFamily;
 
+=======
+>>>>>>> 48261368eebb052b9864277916be46d9993a1bc1
 @Entity
 @Table(name = "ramaPacFamily")
 @DiscriminatorValue("RAMA_PAC_FAMILY")
@@ -20,7 +23,14 @@ public class RamaPacFamily extends PlanComplement{
 
     @Enumerated(EnumType.STRING)
     private SubRamaPacFamily subRamaPacFamily;
+<<<<<<< HEAD
     @OneToMany(mappedBy = "ramaPacFamily")
     private List<PlanPacFamily> pacFamilies;
+=======
+    @ElementCollection
+    private List<String> PlanPacFamily;
+    @ElementCollection
+    private List<String> coberturaPacFamily;
+>>>>>>> 48261368eebb052b9864277916be46d9993a1bc1
 
 }

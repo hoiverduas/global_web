@@ -15,7 +15,10 @@ public abstract class PolizaSalud  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+<<<<<<< HEAD
     private String characteristics;
+=======
+>>>>>>> 48261368eebb052b9864277916be46d9993a1bc1
 
 
 }
