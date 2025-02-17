@@ -1,12 +1,17 @@
 package com.sura.global_web.planComplement.model;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+
+
+import com.sura.global_web.plans.model.PlanPacFamily;
+
 
 @Entity
 @Table(name = "ramaPacFamily")
@@ -18,9 +23,15 @@ public class RamaPacFamily extends PlanComplement{
 
     @Enumerated(EnumType.STRING)
     private SubRamaPacFamily subRamaPacFamily;
-    @ElementCollection
-    private List<String> PlanPacFamily;
-    @ElementCollection
-    private List<String> coberturaPacFamily;
+
+    @OneToMany(mappedBy = "ramaPacFamily", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<PlanPacFamily> pacFamilies;
+
+    public void addPlanPacFamily(PlanPacFamily plan) {
+        plan.setRamaPacFamily(this); // Establecer relación bidireccional
+        this.pacFamilies.add(plan);
+    }
+
 
 }
